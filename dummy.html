@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+  <title>Horizontal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/1f280ffe0a.js" crossorigin="anonymous"></script>
+<script src="https://cdn.tiny.cloud/1/ivjf1i749q2bapl9e8sr5qqkc4zjwq5cfqba2pgp3ewaxtnq/tinymce/5/tinymce.min.js"
+    referrerpolicy="origin"></script>
+  <script src="tiny.js">  </script>
+
+<script src="main.js"></script>
+
+<body>
+
+<form id="regForm" >
+  
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab">
+    <section>
+      <div class="tabs tabs-style-topline">
+        <nav>
+          <ul>
+            <li class="tab-current" ><a href="#section-topline-1" onmousedown="textchange(this)" class="icon icon-home"><img src="basic home.svg" style="height: 30px; width: 30px; padding-right: 12px;"><span>Basic</span></a></li>
+            <li><a href="#section-topline-2" class="icon icon-gift" onmousedown="textchange(this)" onclick="nextprevwithoutcheck(1)"><img src="appointment.svg" style="height: 30px; width: 30px; padding-right: 12px;"><span>Appointment Settings</span></a></li>
+            <li><a href="#section-line-3" onmousedown="textchange(this)" onclick="nextprevwithoutcheck(2)"><img src="form.svg" style="height: 30px; width: 30px; padding-right: 8px;"><span>Custom Form</span></a></li>
+            <li><a href="#section-topline-4" onmousedown="textchange(this)" onclick="nextprevwithoutcheck(3)" class="icon icon-coffee"><img src="email.svg" style="height: 30px; width: 30px; padding-right: 12px;"><span>Custom Email</span></a></li>
+            
+          </ul>
+        </nav>
+        
+        
+      </div><!-- /tabs -->
+    </section>
+    <div style="text-align:center; ">
+      <h1 class="text-muted" style="display: inline-block; font-size: 28px;  ">Step 1 </h1>
+      <h4 style="display: inline-block;font-size: 25px; ">&#160;&#160;Enter Basic Details</h4>
+    </div>
+    
+    
+    <div id="zz" >Name</div>
+    <p ><input id="zz1" placeholder="Enter your name" class="a" name="fname"  oninput="this.className = ''"></p>
+     
+    <div id="zz" class="loca">Location</div>
+    <div class="main">
+    <div class="op">
+      <select name="cars" class="check" id="zz1" onchange="happy()">
+      <option value="Select" selected>Select</option>
+      <option value="Google Meet">Google Meet</option>
+      <option value="Zoom">Zoom</option>
+      <option value="Custom">Custom</option>
+    
+     
+    </select></div>
+    <div class="opp"><input class="display" id="zz13" style="width: auto;" placeholder="Enter your location"  name="fname"  ></div>
+      
+    </p>
+
+  </div>
+    <div id="zz" >Description</div>
+    <p><textarea id="zz1" name="desc" cols="30" rows="3"class="a" placeholder="Description" oninput="this.className = ''"></textarea>
+      </p>
+    <div id="zz" >Upload Image</div>
+    <p><input id="zz1" type="file" id="imgupload" name="img" class="a " accept="image/*"  oninput="this.className = ''"></p>
+
+      
+    <p class="no-center text-align-left m-0" style="font-size: 18px;"><input type="checkbox" name="paidApp." id="x" onchange="nothappy()"> Paid Appointment</p>
+    <div class="vanish">
+    <p>
+      <select id="zz1" name="timeformat" class="inp1" oninput="this.className = ''" style="width:200px !important; margin-right: 10px;">
+        <option  value="mins">Stripe</option>
+        <option value="hours">Dollar</option>
+        <option value="days">Cad</option>
+      </select>
+      <span>
+        <input placeholder="Price..."  name="price" type="number" class="w-25 inp2" id="u" >
+      </span>
+      <select id="zz1" name="timeformat" class="inp3"  oninput="this.className = ''" style="width:120px !important;">
+        <option  value="mins">Aud</option>
+        <option value="hours">Dollar</option>
+        <option value="days">Cad</option>
+      </select>
+    </p>
+  </div>
+
+    <!-- <p style="position: relative; right:105px;">
+      <span id="zz" >Paid&#160;</span>&#160;&#160;
+      <input type="checkbox" name="paidApp." id="x" onchange="harsh()">
+      <span style="padding-left: 15px; padding-right: 5px; " id="zz">Price</span>
+      <span><input style="display: inline; width:210px; " placeholder="Price " name="price" type="number" id="u" disabled>
+        
+        <select id="zz1" name="timeformat"  oninput="this.className = ''" style="width:80px !important;">
+          <option  value="mins">Aud</option>
+          <option value="hours">Dollar</option>
+          <option value="days">Cad</option>
+        </select> &nbsp;
+        <label for="" >
+        
+      </span>
+    </p> -->
+    
+
+    
+
+    <div id="zz">Duration</div>
+    <p>
+      <select  id="zz2" name="hours" class="a" style="width:30% !important;" oninput="this.className = ''">
+        <option value="0">0 Hours</option>
+        <option value="1">1 Hours</option>
+        <option value="2">2 Hours</option>
+        <option value="3">3 Hours</option>
+        <option value="4">4 Hours</option>
+        <option value="5">5 Hours</option>
+        <option value="6">6 Hours</option>
+        <option value="7">7 Hours</option>
+        <option value="8">8 Hours</option>
+        <option value="9">9 Hours</option>
+        <option value="10">10 Hours</option>
+        <option value="11">11 Hours</option>
+        <option value="12">12 Hours</option>
+      </select>
+      <select  id="zz2" name="minutes" class="a" style="width:30% !important;" oninput="this.className = ''">
+        <option value="0">0 Minutes</option>
+        <option value="5">5 Minutes</option>
+        <option value="10">10 Minutes</option>
+        <option value="15">15 Minutes</option>
+        <option value="20">20 Minutes</option>
+        <option value="25">25 Minutes</option>
+        <option value="30">30 Minutes</option>
+        <option value="35">35 Minutes</option>
+        <option value="40">40 Minutes</option>
+        <option value="45">45 Minutes</option>
+        <option value="50">50 Minutes</option>
+        <option value="55">55 Minutes</option>
+      </select>
+    </p>
+    <span style="font-size: 18px; padding-left: 180px; ">Interval</span>
+    <p>
+      <select id="zz1" name="Interval" class="a" oninput="this.className = ''">
+        <option value="5">5 Minutes</option>
+        <option value="10">10 Minutes</option>
+        <option value="15">15 Minutes</option>
+        <option value="20">20 Minutes</option>
+        <option value="30">30 Minutes</option>
+        <option value="45">45 Minutes</option>
+        <option value="60">60 Minutes</option>
+      </select>
+    </p>
+  </div>
+  
+ </div>
+
+  <div class="tab">
+    
+      <section>
+        <div class="tabs tabs-style-topline">
+          <nav>
+            <ul>
+              <li ><a href="#section-topline-1"  onclick="nextprevwithoutcheck(-1)"class="icon icon-home"><img src="basic home.svg" style="height: 30px; width: 30px; padding-right: 12px;"><span>Basic</span></a></li>
+              <li class="tab-current"><a href="#section-topline-2"  onclick="nextprevwithoutcheck(0)"class="icon icon-gift"><img src="appointment.svg" style="height: 30px; width: 30px; padding-right: 12px;"><span>Appointment Settings</span></a></li>
+              <li><a href="#section-line-3" onclick="nextprevwithoutcheck(1)"><img src="form.svg" style="height: 30px; width: 30px; padding-right: 8px;"><span>Custom Form</span></a></li>
+              <li><a href="#section-topline-4" onclick="nextprevwithoutcheck(2)" class="icon icon-coffee"><img src="email.svg" style="height: 30px; width: 30px; padding-right: 12px;"><span>Custom Email</span></a></li>
+              
+            </ul>
+          </nav>
+          
+          
+        </div><!-- /tabs -->
+      </section>
+      <div style="text-align:center; ">
+        <h1 class="text-muted" style="display: inline-block; font-size: 28px;">Step 2 </h1>
+        <h4 style="display: inline-block;font-size: 25px;">&#160;&#160;Appointment
+          Settings</h4>
+        </div>
+
+
+    
+    <div id="zz">Meeting type</div>
+    
+    <p>
+      <select name="meetingType" class="a" id="y" oninput="this.className = ''" onchange="harsh1()">
+        <option value="onetoonemeet">One to One Meet</option>
+        <option value="groupBooking">Group Booking</option>
+
+      </select>
+    </p><div id="zz">No of Participants</div>
+    
+    <p><input name="Participants" type="number" id="p" disabled></p>
+    <div id="zz">No of Meetings per Day:</div>
+    
+    <p> <input id="zz1" type="number" name="meetingperday" oninput="this.className = ''" > </p>
+    <div id="zz">Notice Period </div>
+    
+    <p ><input id="zz1" type="number" min="1" name="noticeperiod" oninput="this.className = ''" 
+        style="width: 195px !important; position: relative; left: 120px;">
+      <select id="zz1" name="timeformat"  oninput="this.className = ''" style="width:180px !important;position: relative; left: 120px;">
+        <option  value="mins">mins</option>
+        <option value="hours">hours</option>
+        <option value="days">days</option>
+      </select> &nbsp;
+      <label for="" >
+        <span id="zz"><span style="font-size: 18px;
+          padding-top: 8px;
+          padding-bottom: 3px; position: relative; right: 60px;">of an event start time</span></span>
+        
+      </label>
+    </p>
+    <div id="zz">Available Till</div>
+    
+    
+      <div class="mb-3 form-row align-items-center " style="padding-top: 15px; padding-left: 15px;position:relative;  left: 165px;">
+        <div class="col-auto">
+        <input size="5" type="number" class="form-control " id="z" style="width: 380px !important;" min="1" onblur="harsh2()">
+        </div>
+        <div class="col-auto ">
+          <span class="input-group-text" style="width: 70px; height: 40px;"><div style="font-size: 18px;
+            padding-top: 8px;
+            padding-bottom: 3px; position: relative; right: 175px;" id="zz">days</div></span>
+          </div>
+        </div>
+      </div>
+   
+  </div>
+
+
+
+  <div class="tab">
+    
+      <section>
+        <div class="tabs tabs-style-topline">
+          <nav>
+            <ul>
+              <li ><a href="#section-topline-1" onclick="nextprevwithoutcheck(-2)" class="icon icon-home"><img src="basic home.svg" style="height: 30px; width: 30px; padding-right: 12px;"><span>Basic</span></a></li>
+              <li><a href="#section-topline-2" onclick="nextprevwithoutcheck(-1)"class="icon icon-gift"><img src="appointment.svg" style="height: 30px; width: 30px; padding-right: 12px;"><span>Appointment Settings</span></a></li>
+              <li class="tab-current" ><a href="#section-topline-3" onclick="nextprevwithoutcheck(0)"class="icon icon-upload"><img src="form.svg" style="height: 30px; width: 30px; padding-right: 8px;"><span>Custom Form</span></a></li>
+              <li><a href="#section-topline-4"onclick="nextprevwithoutcheck(1)" class="icon icon-coffee"><img src="email.svg" style="height: 30px; width: 30px; padding-right: 12px;"><span>Custom Email</span></a></li>
+              
+            </ul>
+          </nav>
+          
+          
+        </div><!-- /tabs -->
+      </section>
+      <div style="text-align:center; ">
+        <h1 class="text-muted" style="display: inline-block; font-size: 28px;">Step 3 </h1>
+          <h4 style="display: inline-block;font-size: 25px;">&#160;&#160;Custom Form</h4>
+  </div>
+
+
+      
+      
+      
+      <div id="zz" >Name</div>
+        <p><input id="zz1" placeholder="Enter your name" name="fname"  oninput="this.className = ''" disabled></p>
+        <div id="zz" >Email</div>
+        <p><input id="zz1" placeholder="Enter your email" name="email"  oninput="this.className = ''" disabled></p>
+        <button class="btn btn-light btn-outline-dark" style="border: 1px solid black;position: relative; left:183px" type="button">Add a guest</button><br><br>
+        <div id="zz" >Message</div>
+        
+        <p><textarea id="zz6" name="desc" cols="30" rows="3" oninput="this.className = ''"
+             disabled></textarea>
+            <a href="#" style="position: relative; bottom:80px;left:18px">
+              <img style="width: 16px; height: 16px;" src="edit.svg">
+            </a>
+            <a href="#" style="position: relative; right:2px; bottom: 50px">
+              <img style="width: 16px; height: 16px;" src="bin.svg">
+            </a>
+          </p>
+           
+          <a href="#" style="color: rgb(0, 140, 255); text-decoration: none;position: relative; left:170px; bottom: 25px;"> + Add a new question</a>
+
+    </div>
+    <div class="tab">
+    
+      <section>
+        <div class="tabs tabs-style-topline">
+          <nav>
+            <ul>
+              <li ><a href="#section-topline-1" onclick="nextprevwithoutcheck(-3)"class="icon icon-home"><img src="basic home.svg" style="height: 30px; width: 30px; padding-right: 12px;"><span>Basic</span></a></li>
+              <li><a href="#section-topline-2" onclick="nextprevwithoutcheck(-2)" class="icon icon-gift"><img src="appointment.svg" style="height: 30px; width: 30px; padding-right: 12px;"><span>Appointment Settings</span></a></li>
+              <li ><a href="#section-topline-3" onclick="nextprevwithoutcheck(-1)"class="icon icon-upload"><img src="form.svg" style="height: 30px; width: 30px; padding-right: 8px;"><span>Custom Form</span></a></li>
+              <li class="tab-current"><a href="#section-topline-4"  onclick="nextprevwithoutcheck(0)"class="icon icon-coffee"><img src="email.svg" style="height: 30px; width: 30px; padding-right: 12px;"><span>Custom Email</span></a></li>
+              
+            </ul>
+          </nav>
+       </div>   
+      </section>   
+      
+        
+      <div style="text-align:center; " class="emailpage">
+        <h1 class="text-muted" style="display: inline-block; font-size: 28px;">Step 4 </h1>
+        <h4 style="display: inline-block;font-size: 25px;">&#160;&#160;Custom Email</h4>
+        <div class="main-container comtainer-fluid w-100 bg-light">
+          <div class="inner-container row d-flex justify-content-space-between">
+            <div class="tab-container nav-container col-3">
+              <ul class="tab-nav py-2 mx-auto nav-pills nav-stacked">
+                <li class="active">Email Confirmation</li>
+                <li class="">Email Cancellation</li>
+                <li class="">Email Reschedule</li>
+                <li class="">Email Reminder</li>
+                <li class="">Email followup</li>
+              </ul>
+            </div>
+      
+            <div class="text-part col-9">
+              <div class="Confirmation active" id="row">
+                <div class="heading-div">
+                  <h1 class="heading1">Confirmation Email Subject</h1>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="text-content">
+                  <h1 class="heading1">Confirmation Email Body</h1>
+                  <div class="form-group">
+                    <form method="post">
+                      <textarea class="editor"></textarea>
+                    </form>
+                  </div>
+                </div>
+                
+                <div class="accordion" id="accordionExample">
+                  <div class="card">
+                    <div class="card-header" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Tags
+                        </button>
+                      </h2>
+                    </div>
+                
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="inner-tags">
+                    
+                          <p class="para">For Example: Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, adipisci vitae.
+                            Doloribus maiores dolorem, numquam alias odit cupiditate voluptatem accusamus molestias reiciendis obcaecati
+                            eligendi unde, atque praesentium quibusdam repellat magni.
+                          </p>
+                
+                          <h5 class="heading5">Buyer Name <span>{{name}}</span></h5>
+                          <h5 class="heading5">Buyer Email <span>{{email}}</span></h5>
+                          <h5 class="heading5">Product <span>{{product_name}}</span></h5>
+                          <h5 class="heading5">Price <span>{{price}}</span></h5>
+                          <h5 class="heading5">Meeting Duration <span>{{duration}}</span></h5>
+                          <h5 class="heading5">Meeting Date <span>{{date}}</span></h5>
+                          <h5 class="heading5">Meeting Slot <span>{{slot}}</span></h5>
+                          <h5 class="heading5">User Timezone <span>{{user_timezone}}</span></h5>
+                          <h5 class="heading5">Seller Name <span>{{seller_name}}</span></h5>
+                
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                <div class="btn-div">
+                  <button type="button" class="btn btn-primary w-100">Update</button>
+                </div>
+              </div>
+      
+              <div class="Confirmation" id="row">
+                <div class="heading-div">
+                  <h1 class="heading1">Cancellation Email Subject</h1>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="text-content">
+                  <h1 class="heading1"> Cancellation Email Body</h1>
+                  <div class="form-group">
+                    <form method="post">
+                      <textarea class="editor"></textarea>
+                    </form>
+                  </div>
+                </div>
+                <div class="accordion" id="accordionExample">
+                  <div class="card">
+                    <div class="card-header" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Tags
+                        </button>
+                      </h2>
+                    </div>
+                
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="inner-tags">
+                    
+                          <p class="para">For Example: Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, adipisci vitae.
+                            Doloribus maiores dolorem, numquam alias odit cupiditate voluptatem accusamus molestias reiciendis obcaecati
+                            eligendi unde, atque praesentium quibusdam repellat magni.
+                          </p>
+                
+                          <h5 class="heading5">Buyer Name <span>{{name}}</span></h5>
+                          <h5 class="heading5">Buyer Email <span>{{email}}</span></h5>
+                          <h5 class="heading5">Product <span>{{product_name}}</span></h5>
+                          <h5 class="heading5">Price <span>{{price}}</span></h5>
+                          <h5 class="heading5">Meeting Duration <span>{{duration}}</span></h5>
+                          <h5 class="heading5">Meeting Date <span>{{date}}</span></h5>
+                          <h5 class="heading5">Meeting Slot <span>{{slot}}</span></h5>
+                          <h5 class="heading5">User Timezone <span>{{user_timezone}}</span></h5>
+                          <h5 class="heading5">Seller Name <span>{{seller_name}}</span></h5>
+                
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                
+                <div class="btn-div">
+                  <button type="button" class="btn btn-primary w-100">Update</button>
+                </div>
+              </div>
+      
+              <div class="Confirmation" id="row">
+                <div class="heading-div">
+                  <h1 class="heading1">Reschedule Email Subject</h1>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="text-content">
+                  <h1 class="heading1">Reschedule Email Body</h1>
+                  <div class="form-group">
+                    <form method="post">
+                      <textarea class="editor"></textarea>
+                    </form>
+                  </div>
+                  <div class="accordion" id="accordionExample">
+                    <div class="card">
+                      <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Tags
+                          </button>
+                        </h2>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                          <div class="inner-tags">
+                      
+                            <p class="para">For Example: Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, adipisci vitae.
+                              Doloribus maiores dolorem, numquam alias odit cupiditate voluptatem accusamus molestias reiciendis obcaecati
+                              eligendi unde, atque praesentium quibusdam repellat magni.
+                            </p>
+                  
+                            <h5 class="heading5">Buyer Name <span>{{name}}</span></h5>
+                            <h5 class="heading5">Buyer Email <span>{{email}}</span></h5>
+                            <h5 class="heading5">Product <span>{{product_name}}</span></h5>
+                            <h5 class="heading5">Price <span>{{price}}</span></h5>
+                            <h5 class="heading5">Meeting Duration <span>{{duration}}</span></h5>
+                            <h5 class="heading5">Meeting Date <span>{{date}}</span></h5>
+                            <h5 class="heading5">Meeting Slot <span>{{slot}}</span></h5>
+                            <h5 class="heading5">User Timezone <span>{{user_timezone}}</span></h5>
+                            <h5 class="heading5">Seller Name <span>{{seller_name}}</span></h5>
+                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  <div class="btn-div">
+                    <button type="button" class="btn btn-primary w-100">Update</button>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="Confirmation" id="row">
+                
+                  <div class="input-on-off d-flex justify-content-space-between align-items-center">
+                    <h1 class="heading1">
+                      Email Reminder <i class="fas fa-plus-circle temp"></i>
+                    </h1>
+                    <label class="toggle go">
+                      <input type="checkbox" />
+                      <span class="slider round"></span>
+                    </label>
+                  </div>
+                  
+                  <div class="good">
+                    <div class="timer" style="text-align: left;">
+                    
+                      <div class="a1">
+                        <div class="time-cut">
+                          <input type="email" class="form-control col-2 mr-2" value="1" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                          <select class="form-control col-7" id="exampleFormControlSelect1">
+                            <option>Hour(s) Before</option>
+                            <option>Day(s) Before</option>
+                            <option>Minute(s) Before</option>
+                          </select> 
+                        </div>
+                      </div>
+                      <!-- <div class="a1"></div> -->
+                      <!-- <div class="a2"></div> -->
+                      
+                    </div>  
+      
+               
+                <div class="text-content">
+                  <div class="heading-div">
+                    <h1 class="heading1">Reminder Email Subject</h1>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <h1 class="heading1">Reminder Email Body</h1>
+                  <div class="form-group">
+                    <form method="post">
+                      <textarea class="editor"></textarea>
+                    </form>
+                  </div>
+                </div>
+                <div class="accordion" id="accordionExample">
+                  <div class="card">
+                    <div class="card-header" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Tags
+                        </button>
+                      </h2>
+                    </div>
+                
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="inner-tags">
+                    
+                          <p class="para">For Example: Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, adipisci vitae.
+                            Doloribus maiores dolorem, numquam alias odit cupiditate voluptatem accusamus molestias reiciendis obcaecati
+                            eligendi unde, atque praesentium quibusdam repellat magni.
+                          </p>
+                
+                          <h5 class="heading5">Buyer Name <span>{{name}}</span></h5>
+                          <h5 class="heading5">Buyer Email <span>{{email}}</span></h5>
+                          <h5 class="heading5">Product <span>{{product_name}}</span></h5>
+                          <h5 class="heading5">Price <span>{{price}}</span></h5>
+                          <h5 class="heading5">Meeting Duration <span>{{duration}}</span></h5>
+                          <h5 class="heading5">Meeting Date <span>{{date}}</span></h5>
+                          <h5 class="heading5">Meeting Slot <span>{{slot}}</span></h5>
+                          <h5 class="heading5">User Timezone <span>{{user_timezone}}</span></h5>
+                          <h5 class="heading5">Seller Name <span>{{seller_name}}</span></h5>
+                
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                <div class="btn-div" >
+                  <button type="button" class="btn btn-primary w-100" >Update Email Details</button>
+                </div>
+              </div>
+            </div>
+              <div class="Confirmation" id="row">
+            
+                  <div class="input-on-off d-flex justify-content-space-between align-items-center">
+                    <h1 class="heading1">
+                      Email Followup 
+                    </h1>
+                    <label class="toggle toggl">
+               
+                      <input class="input" type="checkbox" />
+                      <span class="slider round"></span>
+                    </label>
+                  </div>
+                  <div class="notgood">
+                  <div class="timer" style="text-align: left;">
+                    <div class="time w-100 d-flex justify-content-space-between align-items-center">
+                      <div class="timeCut">
+                        <input type="email" class="form-control col-2 mr-2" value="1" id="exampleInputEmail1"
+                          aria-describedby="emailHelp">
+                        <select class="form-control col-7" id="exampleFormControlSelect1">
+                          <option>Hour(s) After</option>
+                          <option>Day(s) After</option>
+                          <option>Minute(s) After</option>
+                        </select> 
+                      </div>
+            </div>
+               
+                <div class="text-content">
+                  <div class="heading-div">
+                    <h1 class="heading1">Followup Email Subject</h1>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <h1 class="heading1">Followup Email Body</h1>
+                  <div class="form-group">
+                    <form method="post">
+                      <textarea class="editor"></textarea>
+                    </form>
+                  </div>
+                </div>
+                <div class="accordion" id="accordionExample">
+                  <div class="card">
+                    <div class="card-header" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Tags
+                        </button>
+                      </h2>
+                    </div>
+                
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="inner-tags">
+                    
+                          <p class="para">For Example: Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, adipisci vitae.
+                            Doloribus maiores dolorem, numquam alias odit cupiditate voluptatem accusamus molestias reiciendis obcaecati
+                            eligendi unde, atque praesentium quibusdam repellat magni.
+                          </p>
+                
+                          <h5 class="heading5">Buyer Name <span>{{name}}</span></h5>
+                          <h5 class="heading5">Buyer Email <span>{{email}}</span></h5>
+                          <h5 class="heading5">Product <span>{{product_name}}</span></h5>
+                          <h5 class="heading5">Price <span>{{price}}</span></h5>
+                          <h5 class="heading5">Meeting Duration <span>{{duration}}</span></h5>
+                          <h5 class="heading5">Meeting Date <span>{{date}}</span></h5>
+                          <h5 class="heading5">Meeting Slot <span>{{slot}}</span></h5>
+                          <h5 class="heading5">User Timezone <span>{{user_timezone}}</span></h5>
+                          <h5 class="heading5">Seller Name <span>{{seller_name}}</span></h5>
+                
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                <div class="btn-div">
+                  <button type="button" class="btn btn-primary w-100">Update Email Details</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+            
+      
+          </div>
+        </div>
+      
+        
+    </div>
+  </div>
+    
+  
+ 
+  
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Save</button>
+    </div>
+  </div>
+  <!-- Circles which indicates the steps of the form: -->
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+  </div>
+
+  </form>
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  
+      </div>
+      <div class="modal-body">
+        <p>Your Changes Have been Saved</p>
+      </div>
+      
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script>
+
+
+function harsh1(){
+    if (document.getElementById("y").value == "groupBooking"){
+    document.getElementById("p").disabled=false;
+    document.getElementById("p").setAttribute("class","a");
+  } else {
+    document.getElementById("p").disabled=true; 
+    document.getElementById("p").removeAttribute("class","a");
+  }
+
+  if (document.getElementById("y").value == "onetoonemeet"){
+    document.getElementById("p").value=" ";
+  }
+}
+
+function harsh2(){
+    if (document.getElementById("z").value != null){
+        document.getElementById("z").style.backgroundColor="white";
+    }
+    else if(document.getElementById("z").value == null){
+        document.getElementById("z").style.backgroundColor="pink";
+    }
+}
+
+
+  // document.getElementById("img").removeAttribute("required");
+  //document.getElementById("imgupload").required=false;
+  document.getElementById("prevBtn").style.display = "none";
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  //... and fix the Previous/Next buttons:
+  // if (n == 0) {
+  //   document.getElementById("prevBtn").style.display = "none";
+  // } else {
+  //   document.getElementById("prevBtn").style.display = "inline";
+  // }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Save";
+  }
+  //... and run a function that will display the correct step indicator:
+  fixStepIndicator(n)
+}
+function textchange(){
+   this.style.color="white";
+}
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+
+  // Increase or decrease the current tab by 1:
+  
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+   
+    document.getElementById("regForm").submit();
+    
+    return true;
+  }
+  // Otherwise, display the correct tab:
+  $('#myModal').modal('show');
+    e.preventDefault();
+ 
+}
+function nextprevwithoutcheck(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByClassName("a");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
+
+// const onClick = document.querySelector(".on_click");
+//   onClick.addEventListener("click", () => {
+//     // const display = document.querySelector(".display");
+//     alert("can");
+//   })
+ 
+
+var k=0;
+function happy(){
+  var noob=document.querySelector(".check").value;
+  console.log(noob)
+  if(noob=="Custom")
+  {
+    document.getElementById("zz13").style.display="block"
+  }
+  else{
+    document.getElementById("zz13").style.display="none"
+  }
+  }
+
+function nothappy(){var pro=document.querySelector("#x")
+if(pro.checked==true&&k%2==0){
+  document.querySelector(".vanish").style.display="block"
+  k+=1;
+  document.querySelector(".inp1").disabled=false;
+  document.querySelector(".inp2").disabled=false;
+  document.querySelector(".inp3").disabled=false;
+}
+else {
+  document.querySelector(".inp1").disabled=true;
+  document.querySelector(".inp2").disabled=true;
+  document.querySelector(".inp3").disabled=true;
+  document.querySelector(".inp2").value=0;
+  k++;
+}
+}
+
+
+</script>
+<script src="main1.js"></script>
+</body>
+<script>
+  (function() {
+
+    [].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+      new CBPFWTabs( el );
+    });
+
+  })();
+</script>
+</html>
